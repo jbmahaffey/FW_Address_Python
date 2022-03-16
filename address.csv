@@ -1,0 +1,5 @@
+name,type,subnet,fqdn,allow-routing
+test1,ipmask,1.1.1.0/24,false
+test2,ipmask,2.2.2.0/24,false
+test3,ipmask,3.3.3.3/32,false
+msn,fqdn,,msn.com,false
