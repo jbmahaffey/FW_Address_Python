@@ -4,8 +4,6 @@ import requests
 import argparse
 import yaml
 import csv
-import pprint
-import json
 import ssl
 import logging
 ssl._create_default_https_context = ssl._create_unverified_context
@@ -14,7 +12,7 @@ requests.packages.urllib3.disable_warnings()
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--fortigate', default='172.17.101.57', help='Firewall IP Address')
-    parser.add_argument('--token', default='wcz9r6sbGHr04kz7qzHg5xGrxfk8y8', help='API Token')
+    parser.add_argument('--token', default='', help='API Token')
     parser.add_argument('--logging', default='', help='Logging levels info, error, or debug')
     parser.add_argument('--devlist', default='address.csv', help='YAML/CSV file with list of approved devices.')
     args = parser.parse_args()
