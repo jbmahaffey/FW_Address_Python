@@ -16,6 +16,16 @@ def main():
     parser.add_argument('--logging', default='', help='Logging levels info, error, or debug')
     parser.add_argument('--devlist', default='address.csv', help='YAML/CSV file with list of approved devices.')
     args = parser.parse_args()
+
+    # Only enable logging when necessary
+    if args.logging != '':
+        logginglevel = args.logging
+        formattedlevel = logginglevel.upper()
+
+        # Open logfile
+        logging.basicConfig(format='%(asctime)s %(levelname)-8s %(message)s',filename='cvpmove.log', level=formattedlevel, datefmt='%Y-%m-%d %H:%M:%S')
+    else:
+        ()
     
     # Open variable file either csv or yaml
     filetype = args.devlist.split('.')
