@@ -23,7 +23,7 @@ def main():
         formattedlevel = logginglevel.upper()
 
         # Open logfile
-        logging.basicConfig(format='%(asctime)s %(levelname)-8s %(message)s',filename='cvpmove.log', level=formattedlevel, datefmt='%Y-%m-%d %H:%M:%S')
+        logging.basicConfig(format='%(asctime)s %(levelname)-8s %(message)s',filename='address.log', level=formattedlevel, datefmt='%Y-%m-%d %H:%M:%S')
     else:
         ()
     
