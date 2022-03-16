@@ -44,7 +44,7 @@ def main():
 
     try:
         token = args.token
-        address_url = 'http://%s/api/v2/cmdb/firewall/address' % args.fortigate
+        address_url = 'https://%s/api/v2/cmdb/firewall/address' % args.fortigate
         headers = {'Authorization': 'Bearer' + token, 
                     'content-type': 'application/json'}
 
