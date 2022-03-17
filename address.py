@@ -43,10 +43,11 @@ def main():
         data = {'all': devices}
 
     try:
-        token = args.token
         address_url = 'https://%s/api/v2/cmdb/firewall/address' % args.fortigate
-        headers = {'Authorization': 'Bearer' + token, 
-                    'content-type': 'application/json'}
+        headers = {
+            'Authorization': 'Bearer' + args.token, 
+            'content-type': 'application/json'
+            }
 
         for addr in data['all']:
             if addr['type'] == 'ipmask':
